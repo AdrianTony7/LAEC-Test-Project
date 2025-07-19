@@ -19,7 +19,7 @@ let selectedQuizSubject = ''; // Stores the chosen quiz subject
 let shuffledQuestions = []; // Array to hold questions for the current quiz
 let currentQuestionIndex = 0; // Tracks which question we're on
 let score = 0; // Tracks the user's score
-const QUESTION_LIMIT = 5; // You can change this number for different quiz lengths
+const QUESTION_LIMIT = 10; // You can change this number for different quiz lengths
 
 // 2. Define our Quiz Questions (Array of Objects)
 // This is where we'll store all our quiz data.
