@@ -1,0 +1,163 @@
+*, *::before, *::after {
+    box-sizing: border-box; /* Makes sure padding and border are included in the element's total width and height */
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    background-color: #f0f2f5;
+    /* -webkit-transform: rotate(75deg); */
+    color: #333;
+}
+
+.quiz-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 25px;
+}
+
+#question-text {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns, equal width */
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+/* ====================== */
+
+.btn.correct {
+    background-color: #28a745; /* Green for correct answers */
+}
+
+.btn.wrong {
+    background-color: #dc3545; /* Red for wrong answers */
+}
+
+.next-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.2s ease;
+}
+
+.next-btn:hover {
+    background-color: #5a6268;
+}
+
+
+
+/* General button styling - make it a base for others */
+.btn, .main-btn { /* Apply these styles to both .btn and .main-btn */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 15px; /* Added some margin for spacing */
+}
+
+.btn:hover, .main-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Specific style for the main start/restart buttons */
+.main-btn {
+    padding: 12px 25px; /* Slightly different padding for main buttons */
+    font-size: 1.2em;
+    width: auto; /* Allow button to size naturally */
+    display: inline-block; /* Helps with spacing if other things are inline */
+}
+
+/* Styles for input groups on welcome screen */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align label/input to the left within its group */
+}
+
+.input-group label {
+    display: block; /* Make label take its own line */
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.input-group input[type="text"],
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Crucial for width: 100% with padding */
+    background-color: white;
+}
+
+.input-group select {
+    appearance: none; /* Removes default browser styling for select */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-5.4H18.4c-6.5%200-12.2%203.2-15.6%208.1-3.5%204.9-3.2%2011.6.8%2016.1l139.7%20146.5c4.6%204.8%2011.4%204.8%2016%200l139.7-146.5c4-4.5%204.3-11.2.8-16.1z%22%2F%3E%3C%2Fsvg%3E'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px; /* Make space for the arrow */
+    cursor: pointer;
+}
+
+/* Styles for the Results Screen (initial hidden) */
+#results-screen {
+    text-align: left; /* Align text within results */
+    padding: 20px 0;
+}
+
+#results-screen h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+#results-screen #final-score {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#high-scores-list {
+    list-style-type: decimal; /* Numbered list for high scores */
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+#high-scores-list li {
+    padding: 5px 0;
+    font-size: 1.1em;
+}
+
+/* Ensure the hide class works */
+.hide {
+    display: none !important; /* Use !important to ensure it overrides other styles */
+}
