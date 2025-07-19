@@ -5,53 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/icons/LAEC logo.svg" type="image/svg+xml">
 </head>
 <body class="">
-    <div class="quiz-container">
-        <h1>Welcome to the Quiz!</h1>
-
-        <div id="welcome-screen">
-            <p>Enter your name and pick a quiz subject to begin.</p>
-
-            <div class="input-group">
-                <label for="userName">Your Name:</label>
-                <input type="text" id="userName" placeholder="e.g., Alex Johnson">
+    <main>
+        <div class="quiz-container">
+            <h1>Welcome to the Quiz!</h1>
+    
+            <div id="welcome-screen">
+                <p>Enter your name and pick a quiz subject to begin.</p>
+    
+                <div class="input-group">
+                    <label for="userName">Your Name:</label>
+                    <input type="text" id="userName" placeholder="e.g., Alex Johnson">
+                </div>
+    
+                <div class="input-group">
+                    <label for="quizSubject">Choose a Subject:</label>
+                    <select id="quizSubject">
+                        <option value="">-- Select --</option>
+                        <option value="random">Random (All Subjects)</option>
+                        <option value="html">HTML Basics</option>
+                        <option value="css">CSS Styling</option>
+                        <option value="javascript">JavaScript Fundamentals</option>
+                        </select>
+                </div>
+    
+                <button id="start-quiz-btn" class="main-btn">Start Quiz</button>
             </div>
-
-            <div class="input-group">
-                <label for="quizSubject">Choose a Subject:</label>
-                <select id="quizSubject">
-                    <option value="">-- Select --</option>
-                    <option value="random">Random (All Subjects)</option>
-                    <option value="html">HTML Basics</option>
-                    <option value="css">CSS Styling</option>
-                    <option value="javascript">JavaScript Fundamentals</option>
-                    </select>
+    
+            <div id="quiz-content" class="hide">
+                <div id="question-container">
+                    <p id="question-text">Loading question...</p>
+                    <div id="answer-buttons" class="btn-grid">
+                        </div>
+                </div>
+                <button id="next-button" class="next-btn hide">Next</button>
             </div>
-
-            <button id="start-quiz-btn" class="main-btn">Start Quiz</button>
-        </div>
-
-        <div id="quiz-content" class="hide">
-            <div id="question-container">
-                <p id="question-text">Loading question...</p>
-                <div id="answer-buttons" class="btn-grid">
-                    </div>
+    
+            <div id="results-screen" class="hide">
+                <h2>Quiz Complete!</h2>
+                <p id="final-score">Your Score: 0/0</p>
+                <p>High Scores:</p>
+                <ul id="high-scores-list">
+                    </ul>
+                <button id="restart-quiz-btn" class="main-btn">Play Again</button>
             </div>
-            <button id="next-button" class="next-btn hide">Next</button>
+    
         </div>
+    </main>
 
-        <div id="results-screen" class="hide">
-            <h2>Quiz Complete!</h2>
-            <p id="final-score">Your Score: 0/0</p>
-            <p>High Scores:</p>
-            <ul id="high-scores-list">
-                </ul>
-            <button id="restart-quiz-btn" class="main-btn">Play Again</button>
-        </div>
-
-    </div>
-
+    <footer>
+        <div> Built by Little <b> Angels Educational Center's Programming </b> Team ⭐</div>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

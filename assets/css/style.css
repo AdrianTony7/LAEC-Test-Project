@@ -6,13 +6,25 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+
     background-color: #f0f2f5;
     /* -webkit-transform: rotate(75deg); */
     color: #333;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 50px); /* Ensures the body takes at least the full viewport height */
+}
+
+footer{
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    padding-top: 10px;
+    background-color: #acb1be;
 }
 
 .quiz-container {
